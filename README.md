@@ -66,7 +66,7 @@ Le projet inclut :
 
 ## 💬 Rejoindre le serveur
 
-[![Discord](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f47e.svg) Rejoindre le serveur](https://discord.gg/yHfA4n4Uqt)
+[![Discord](https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f47e.svg) Rejoindre le serveur](https://discord.gg/rvp8thk9YB)
 
 ---
 
