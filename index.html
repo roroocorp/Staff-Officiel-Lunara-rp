@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>👑 Staff Officiel Chicago RP V2 FA</title>
+
+  <meta name="description" content="Retrouvez la liste officielle du staff de Chicago RP V2 FA. Rejoignez-nous sur Discord !">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="chicago.png" type="image/png">
+
+  <!-- Open Graph (Discord / réseaux sociaux preview) -->
+  <meta property="og:title" content="👑 Staff Officiel Chicago RP V2 FA">
+  <meta property="og:description" content="Découvrez la liste officielle de notre staff et rejoignez-nous sur Discord !">
+  <meta property="og:image" content="https://staff-chicago.roleplays.fr/chicago.png">
+  <meta property="og:url" content="https://staff-chicago.roleplays.fr/">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+  /* ton CSS en inline (repris de ton code, je le laisse inchangé ici) */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(circle at top, #161616, #0d0d0d);
+    font-family: 'Segoe UI', sans-serif;
+    color: #f0f0f0;
+    padding: 30px;
+    overflow-x: hidden;
+  }
+  h1.title {
+    text-align: center;
+    font-size: 3rem;
+    color: #ffaa00;
+    text-shadow: 0 0 12px #ffaa00;
+    margin-bottom: 50px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .section {
+    background: #1f1f1f;
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 191, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .section h2 {
+    font-size: 1.5rem;
+    color: #ff7300;
+    margin-bottom: 14px;
+    text-shadow: 0 0 6px #ff7300;
+  }
+  .member { margin: 7px 0; font-size: 1.05rem; }
+  .section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(255, 186, 0, 0.3);
+  }
+  .discord-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 12px rgba(88, 101, 242, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .discord-button:hover { background: #404eed; transform: scale(1.05); }
+  .discord-icon { width: 24px; height: 24px; margin-right: 10px; }
+  .show { opacity: 1 !important; transform: translateY(0) !important; }
+  </style>
+</head>
+<body>
+
+  <h1 class="title">👑 Staff Officiel Discord</h1>
+  <div class="container" id="staff-list"></div>
+
+  <a href="https://discord.gg/yHfA4n4Uqt" target="_blank" class="discord-button">
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f47e.svg" alt="discord" class="discord-icon">
+    Rejoindre le serveur
+  </a>
+
+  <script>
+    fetch('./config.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("staff-list");
+        data.staff.forEach((roleData, index) => {
+          const section = document.createElement("div");
+          section.className = "section";
+          section.innerHTML = `<h2>${roleData.role}</h2>` +
+            roleData.members.map(member => `<p class="member">${member}</p>`).join('');
+          container.appendChild(section);
+          setTimeout(() => section.classList.add("show"), index * 150);
+        });
+      })
+      .catch(error => console.error('Erreur de chargement JSON:', error));
+  </script>
+
+</body>
+</html>
