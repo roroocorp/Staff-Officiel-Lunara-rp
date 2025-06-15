@@ -1,0 +1,13 @@
+{
+  "staff": [
+    { "role": "👑 Createur", "members": ["code kit2.0 (@2.0kit)"] },
+    { "role": "👑 Co Createur", "members": ["rorocorp2.0 (@rorocorp2.0)"] },
+    { "role": "⚔️ Chef Staff", "members": ["Aaron-89R (@tiktok.austral)", "-"] },
+    { "role": "👁️ Staff", "members": ["-", "-", "-", "-", "-"] },
+    { "role": "🤝 Community Manager", "members": ["-", "-", "-"] },
+    { "role": "🛡️ Admin", "members": ["-", "-", "-", "-", "-"] },
+    { "role": "❤️ Helpeur", "members": ["-", "-", "-", "-", "-"] },
+    { "role": "💾 Admin Sauvegarder", "members": ["-", "-"] },
+    { "role": "🍀 Admin Conseiller", "members": ["-", "-", "-", "-", "-"] }
+  ]
+}
